@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Course } from "../../_system/_interfaces/course";
+import { Course } from "../../../_system/_interfaces/course";
+import { VgApiService, VgEvents } from "@videogular/ngx-videogular/core";
+import Hls from "hls.js";
 
 @Component({
   selector: 'app-course-item',
@@ -9,7 +11,10 @@ import { Course } from "../../_system/_interfaces/course";
 export class CourseItemComponent implements OnInit {
   @Input() course: Course
 
+
   constructor() { }
 
   ngOnInit(): void {}
+
+
 }

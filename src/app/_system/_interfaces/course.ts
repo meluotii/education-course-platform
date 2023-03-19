@@ -11,6 +11,7 @@ export interface Course {
   previewImageLink:      string;
   rating:                number;
   meta:                  Meta;
+  lessons?:              Lesson[]
 }
 
 export interface Meta {
@@ -23,4 +24,16 @@ export interface CourseVideoPreview {
   link:             string;
   duration:         number;
   previewImageLink: string;
+}
+
+export interface Lesson {
+  id: string
+  title: string
+  duration: number
+  order: number
+  type: string
+  status: string
+  link: string
+  previewImageLink: string
+  meta: any
 }

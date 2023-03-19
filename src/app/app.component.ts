@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SpinnerService } from "./_system/_services/spinner/spinner.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'education-app';
+  public isLoadingSpinner = true;
+
+  constructor(private spinnerService: SpinnerService,) {
+
+    this.spinnerService.spinnerLoading$.subscribe(isLoading => {
+      setTimeout(() => {
+        this.isLoadingSpinner = isLoading;
+      });
+    });
+  }
+
 }
