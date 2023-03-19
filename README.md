@@ -1,4 +1,6 @@
 # Education App
+The website is accessible on: https://education-course-platform.vercel.app/
+
 
 ## BEFORE START
 Install extension that disables CORS Policy in your browser. 
